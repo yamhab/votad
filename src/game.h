@@ -20,26 +20,19 @@ typedef struct Game {
     Player player;
 } Game;
 
-SDL_AppResult
-gameInit(Game **game);
+SDL_AppResult gameInit(Game **game);
 
-SDL_AppResult
-texturesInit(Game *game);
+SDL_AppResult texturesInit(Game *game);
 
-SDL_AppResult
-gameIterate(Game *game);
+SDL_AppResult gameIterate(Game *game);
 
-SDL_AppResult
-gameRender(Game *game);
+SDL_AppResult gameRender(Game *game);
 
-SDL_AppResult
-mapRender(Game *game);
+SDL_AppResult mapRender(Game *game);
 
-SDL_AppResult
-columnRender(Game *game, double wall_dist, bool side, Vector ray_dir, unsigned char map_tile, size_t x);
+SDL_AppResult columnRender(Game *game, double wall_dist, bool side, Vector ray_dir,
+                           unsigned char map_tile, size_t x);
 
-SDL_AppResult
-gameHandleEvent(Game *game, SDL_Event *event);
+SDL_AppResult gameHandleEvent(Game *game, SDL_Event *event);
 
-void
-gameQuit(Game *game, SDL_AppResult result);
+void gameQuit(Game *game, SDL_AppResult result);
